@@ -39,6 +39,12 @@ class Program {
 
     }
 
+
+// ось тут повинні не так рахувати Депозит, 
+double Credit(double balance, double deposit, double percent, int term) {
+    // 1000, 1000, 5%, 10 
+    // balance 1000  +  (1000*0.05*10)
+    
     static double DepositMoneyGive(ref double balance, ref double deposit, double money) {
 
         balance -= money;
@@ -47,6 +53,8 @@ class Program {
 
     }
 
+
+// і тоді треба буде змінити і кредитну механіку
     static double DepositMoneyGet(ref double balance, ref double deposit) {
 
         double withInterest = deposit * 1.05;
@@ -84,36 +92,3 @@ class Program {
         Console.WriteLine($"Борг по кредиту: {credit}");
 
     }
-
-    static double Money(ref double ba, double money) {
-
-        ba += money;
-        return ba;
-
-    }
-
-    static double AddMoney(ref double ba, double money) {
-
-        ba -= money;
-        return ba;
-
-    }
-
-    static double CreditMoneyGive(ref double balance, ref double credit, double money) {
-
-        balance += money;
-        credit -= money;
-        return balance;
-
-    }
-
-    static double CreditMoneyGet(ref double balance, ref double credit) {
-
-        double withInterest = credit * 1.07;
-        balance += withInterest;
-        credit = 0;
-        return balance;
-
-    }
-}
-*/
